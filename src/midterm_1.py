@@ -156,6 +156,12 @@ def main():
     rel_T_plus = (T - (T + delta_T)) / T
     rel_T_minus = (T - (T - delta_T)) / T
     print(f'The relative error in T is {rel_T_plus} for +{delta_T}, and {rel_T_minus} for -{delta_T}')
+
+    # c)
+
+    J = np.array([dTdL, dTda, dTdD])
+    print(f'The Jacobian matrix is {J}')
+
     #---------------------------------------------------------------------------------------------------------------------
     '''
     Question 2
@@ -227,22 +233,13 @@ def main():
     left_1 = np.linalg.matmul(P_matrix, K)
     left_2 = np.linalg.matmul(left_1, Q_matrix)
     right = np.linalg.matmul(L_matrix, U_matrix)
-    print(f'[P][K][Q] = {left_2} which is the same as [L][U] = {right}')
+    print(f'[P][K][Q] = {left_2} \n which is the same as [L][U] = {right}')
 
 
-    # c)
+    # c) 
+    # in excel
 
     
-
-
-
-
-
-
-
-
-
-
 
 
 
